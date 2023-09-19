@@ -43,6 +43,7 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - EventRPC
+  - UpdateSlideRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

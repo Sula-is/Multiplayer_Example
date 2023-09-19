@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5703197145479444512}
   - component: {fileID: 859590712}
   m_Layer: 0
-  m_Name: NetworkPlayer
+  m_Name: NetworkPlayerCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

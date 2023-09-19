@@ -3,8 +3,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(PhotonView))]
-public class EventSync : MonoBehaviour {
-    public UnityEvent _syncEventOnline = new();
+public class EventSyncString : MonoBehaviour {
+    public string _myString;
+    public UnityEvent<string> _syncStringEventOnline = new();
 
     private PhotonView _myPhotonView;
 
@@ -15,15 +16,15 @@ public class EventSync : MonoBehaviour {
             _myPhotonView = GetComponent<PhotonView>();
         }
 
-        //volendo posso mandarla in locale
-        EventRPC();
-        //e l'RPC solo agli altri
-        _myPhotonView.RPC("EventRPC", RpcTarget.Others);
+        //STRING SYNC
+        EventRPC(_myString);
+        _myPhotonView.RPC("EventRPC", RpcTarget.All, _myString);
     }
 
+
     [PunRPC]
-    private void EventRPC() {
+    private void EventRPC(string syncString) {
         //client or target
-        _syncEventOnline?.Invoke();
+        _syncStringEventOnline?.Invoke(syncString);
     }
 }
