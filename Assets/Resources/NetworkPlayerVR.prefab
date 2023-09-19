@@ -449,6 +449,8 @@ GameObject:
   - component: {fileID: 3292585334157951338}
   - component: {fileID: 7133057954340420497}
   - component: {fileID: 9069220347247847803}
+  - component: {fileID: 2633464660670916909}
+  - component: {fileID: 9216113659903004901}
   m_Layer: 0
   m_Name: NetworkPlayerVR
   m_TagString: Untagged
@@ -494,6 +496,8 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3072402577107341684}
+  - {fileID: 7285249714650852704}
+  - {fileID: 7178452076987555468}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -512,3 +516,48 @@ MonoBehaviour:
   _head_visual: {fileID: 4699875699535408420}
   _rHand_visual: {fileID: 4699875699811679422}
   _lHand_visual: {fileID: 4699875698695620360}
+--- !u!114 &2633464660670916909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7507996676387811355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ae4e084f82d194baade9532d5b9ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head_visual: {fileID: 4699875699535408420}
+  _rHand_visual: {fileID: 4699875699811679422}
+  _lHand_visual: {fileID: 4699875698695620360}
+--- !u!114 &9216113659903004901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7507996676387811355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d6d99fd901c834bb74207486eacf3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _OnIsMine:
+    m_PersistentCalls:
+      m_Calls: []
+  _OnIsNotMine:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2633464660670916909}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
