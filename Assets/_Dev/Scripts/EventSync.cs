@@ -9,7 +9,7 @@ public class EventSync : MonoBehaviour {
     private PhotonView _myPhotonView;
 
     [ContextMenu("SendEvent")]
-    private void SendEventRPC() {
+    public void SendEventRPC() {
         //sent from local
         if (_myPhotonView == null) {
             _myPhotonView = GetComponent<PhotonView>();
